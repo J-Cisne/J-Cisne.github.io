@@ -10,5 +10,17 @@
       
       <p ></a>Click Image To Start Constructing </p>
       <a href="04.5.html"> <img src="Build.jpg"> </a>
+    <audio id="clickSound" src="twinklesoundss.mp3"></audio>
+    <script>
+      const clickSound = document.getElementById('clickSound');
+      const links = document.querySelectorAll('a');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,5 +1,20 @@
 <title>You Picked Explore!</title>
 <body style="background-color:lightgrey;">
+<audio id="clickSound" src="twinklesoundss.mp3"></audio>
 
 <h1>The voice have drove you insane, you are no longer in shape to continue forward...Time to respawn back to the beginning!</h1>
 <a href="Page.html"> <img src="GameOver.jpg"> </a>
+
+<script>
+  const clickSound = document.getElementById('clickSound');
+  const links = document.querySelectorAll('a');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+</body>
+</html>

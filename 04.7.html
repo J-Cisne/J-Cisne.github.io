@@ -1,6 +1,21 @@
 <title>You Picked Building!</title>
 <body style="background-color:burlywood;">
+<audio id="clickSound" src="twinklesoundss.mp3"></audio>
 
 <h1>Good going...you quickly constructed a shack!
 After some time you realize the walls of your new home started to shake...</h1>
 <a href="04.9.html"> <img src="Fall.jpg"> </a>
+
+<script>
+  const clickSound = document.getElementById('clickSound');
+  const links = document.querySelectorAll('a');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+</body>
+</html>

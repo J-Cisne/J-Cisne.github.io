@@ -1,6 +1,21 @@
 <title>You Picked Building!</title>
 <body style="background-color:burlywood;">
+<audio id="clickSound" src="twinklesoundss.mp3"></audio>
 
 <h1>Good going...you started mapping out the layout of your future home!
 After some time you manage to finish before sunset...</h1>
 <a href="04.8.html"> <img src="Sunset.jpg"> </a>
+
+<script>
+  const clickSound = document.getElementById('clickSound');
+  const links = document.querySelectorAll('a');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+</body>
+</html>

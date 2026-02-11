@@ -1,6 +1,21 @@
 <title>You Picked Explore!</title>
 <body style="background-color:lightgrey;">
+<audio id="clickSound" src="twinklesoundss.mp3"></audio>
 
 <h1>Good going...you seemed to have found some exotic wild berries!
 After eating them to satisfy your hunger your vision became blurry...</h1>
 <a href="03.8.html"> <img src="Berries.jpg"> </a>
+
+<script>
+  const clickSound = document.getElementById('clickSound');
+  const links = document.querySelectorAll('a');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function() {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+</body>
+</html>

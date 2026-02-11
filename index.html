@@ -7,5 +7,17 @@
   </head>
   <body>
     <p>Redirecting to Start page...</p>
+    <audio id="clickSound" src="twinklesoundss.mp3"></audio>
+    <script>
+      const clickSound = document.getElementById('clickSound');
+      const links = document.querySelectorAll('a');
+      
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        });
+      });
+    </script>
   </body>
 </html>

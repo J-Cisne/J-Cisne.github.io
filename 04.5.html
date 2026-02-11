@@ -13,5 +13,17 @@
         <a class="btn" href="04.7.html">Right</a>
       </div>
     </div>
+    <audio id="clickSound" src="twinklesoundss.mp3"></audio>
+    <script>
+      const clickSound = document.getElementById('clickSound');
+      const buttons = document.querySelectorAll('.btn, a');
+      
+      buttons.forEach(button => {
+        button.addEventListener('click', function() {
+          clickSound.currentTime = 0;
+          clickSound.play();
+        });
+      });
+    </script>
   </body>
 </html>
