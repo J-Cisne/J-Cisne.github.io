@@ -10,6 +10,12 @@ After eating them to satisfy your hunger your vision became blurry...</h1>
   const clickSound = document.getElementById('clickSound');
   const links = document.querySelectorAll('a');
   
+  // Play sound on page load
+  window.addEventListener('load', function() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+  
   links.forEach(link => {
     link.addEventListener('click', function() {
       clickSound.currentTime = 0;

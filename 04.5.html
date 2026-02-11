@@ -18,6 +18,12 @@
       const clickSound = document.getElementById('clickSound');
       const buttons = document.querySelectorAll('.btn, a');
       
+      // Play sound on page load
+      window.addEventListener('load', function() {
+        clickSound.currentTime = 0;
+        clickSound.play();
+      });
+      
       buttons.forEach(button => {
         button.addEventListener('click', function() {
           clickSound.currentTime = 0;
