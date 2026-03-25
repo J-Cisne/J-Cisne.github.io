@@ -65,3 +65,9 @@ body {
 }
 .buttons-row { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 .muted { color:#666; font-size:0.95rem; }
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
